@@ -1,0 +1,70 @@
+body {
+  background-color: cornflowerblue;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100vw;
+}
+
+.container {
+  background-color: rgba(68, 75, 172, 0.589);
+  padding: 20px 40px;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.form-control {
+  position: relative;
+  /* 20 top , 0 left and right, 40px is bottom */
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control > input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid white;
+  display: block;
+  padding: 15px 0;
+  width: 100%;
+  color: white;
+}
+
+.form-control > input:focus,
+.form-control input:valid {
+  outline: 0;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.form-control > label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  
+}
+
+.form-control > label span {
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-30px);
+}
